@@ -2,9 +2,8 @@ import cv2
 import time
 from ultralytics import YOLO, settings
 
-model = YOLO('C:/Users/Filipe/Desktop/Projeto 1 - IC/results/runs/detect/train4_new_20f_50e/weights/best.pt')
-
-video_path = "C:/Users/Filipe/Pictures/Camera Roll/WIN_20250224_15_50_47_Pro.mp4"
+model = YOLO('')
+video_path = ""
 webcam_id = 0
 cap = cv2.VideoCapture(webcam_id)
 
@@ -117,6 +116,6 @@ def calcTempo():
     print(f"Duração total: {tempoT:.1f} minutos")
 
 
-#print(model.names)
-predict(isVideo=True, widthV=540, heightV=540)
+#se a entrada for através de webcam, isVideo = False
+predict(isVideo=True, widthV=640, heightV=640)
 calcTempo()
