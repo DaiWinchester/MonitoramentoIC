@@ -2,9 +2,12 @@ import cv2
 import time
 from ultralytics import YOLO, settings
 
-model = YOLO('')
+# Inserir o link para o arquivo best.pt na pasta weights
+model = YOLO('caminho/best.pt')
+#endereço para o vídeo
 video_path = ""
 webcam_id = 0
+#substituir video_path ou webcam_id na função abaixo
 cap = cv2.VideoCapture(webcam_id)
 
 # Obter detalhes do vídeo original
