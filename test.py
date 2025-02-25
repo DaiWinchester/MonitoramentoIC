@@ -41,7 +41,6 @@ def predict(isVideo, widthV, heightV):
 
         # Realizar a detecção de objetos
         results = model(image_resized,
-                        # image or video; single value or a list; URL, PIL (RGB), CV2 (BGR), ...
                         conf=0.5,
                         iou=0.7,  # Non-Maximum Supression (NMS)
                         imgsz=540,
@@ -50,7 +49,6 @@ def predict(isVideo, widthV, heightV):
                         save_txt=False,  # Save bbox coordenation
                         save_conf=False,  # save_txt must be True
                         save_crop=False,
-                        # project='runs/detect',
                         stream=False  # Do inference now (False) or after (True)
                         )
 
