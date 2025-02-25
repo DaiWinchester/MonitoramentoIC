@@ -2,7 +2,7 @@ import cv2
 import time
 from ultralytics import YOLO, settings
 
-# Inserir o link para o arquivo best.pt na pasta weights
+# Inserir o caminho para o arquivo best.pt
 model = YOLO('caminho/best.pt')
 #endereço para o vídeo
 video_path = ""
